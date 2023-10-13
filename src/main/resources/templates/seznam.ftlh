@@ -12,75 +12,32 @@
 </head>
 <body>
 <div class="seznam">
+    [#list vizitky]
     <a href="/detail">
         <div class="vizitka">
-            <div class="jmeno">Dita (Přikrylová) Formánková</div>
-            <div class="firma">Czechitas z. s.</div>
+            [#items as vizitka]
+            <div> ${lektor?counter}</div>
+            <div class="jmeno">${Vizitka.jmeno}</div>
+            <div class="firma">${Vizitka.firma}</div>
             <div class="udaje">
                 <div class="adresa">
-                    <div>Václavské náměstí 837/11</div>
-                    <div><span>11000</span> Praha 1</div>
+                    <div>${Vizitka.ulice}</div>
+                    <div><span>${Vizitka.obecPsc}</span></div>
                 </div>
                 <div class="kontakty">
-                    <div><i class="las la-at"></i> <span>dita@czechitas.cs</span></div>
-                    <div><i class="las la-phone-alt"></i> <span>+420 800123456</span></div>
-                    <div><i class="las la-globe"></i> <span>www.czechitas.cz</span></div>
+                    <div><i class="las la-at"></i> <span>${Vizitka.email}</span></div>
+                    <div><i class="las la-phone-alt"></i> <span>${Vizitka.telefon}</span></div>
+                    <div><i class="las la-globe"></i> <span>${Vizitka.web}</span></div>
                 </div>
             </div>
         </div>
+        [/#items]
     </a>
-
-    <a href="/detail">
-        <div class="vizitka">
-            <div class="jmeno">Barbora Bühnová</div>
-            <div class="firma">Czechitas z. s.</div>
-            <div class="udaje">
-                <div class="adresa">
-                    <div>Václavské náměstí 837/11</div>
-                    <div><span>11000</span> Praha 1</div>
-                </div>
-                <div class="kontakty">
-                    <div><i class="las la-phone-alt"></i> <span>+420 800123456</span></div>
-                    <div><i class="las la-globe"></i> <span>www.czechitas.cz</span></div>
-                </div>
-            </div>
-        </div>
-    </a>
-
-    <a href="/detail">
-        <div class="vizitka">
-            <div class="jmeno">Monika Ptáčníková</div>
-            <div class="firma">Czechitas z. s.</div>
-            <div class="udaje">
-                <div class="adresa">
-                    <div>Václavské náměstí 837/11</div>
-                    <div><span>11000</span> Praha 1</div>
-                </div>
-                <div class="kontakty">
-                    <div><i class="las la-at"></i> <span>monika@czechitas.cs</span></div>
-                    <div><i class="las la-phone-alt"></i> <span>+420 800123456</span></div>
-                    <div><i class="las la-globe"></i> <span>www.czechitas.cz</span></div>
-                </div>
-            </div>
-        </div>
-    </a>
-
-    <a href="/detail">
-        <div class="vizitka">
-            <div class="jmeno">Mirka Zatloukalová</div>
-            <div class="firma">Czechitas z. s.</div>
-            <div class="udaje">
-                <div class="adresa">
-                    <div>Václavské náměstí 837/11</div>
-                    <div><span>11000</span> Praha 1</div>
-                </div>
-                <div class="kontakty">
-                    <div><i class="las la-at"></i> <span>mirka@czechitas.cs</span></div>
-                    <div><i class="las la-globe"></i> <span>www.czechitas.cz</span></div>
-                </div>
-            </div>
-        </div>
-    </a>
+    [#else]
+    <div>
+        <em>Seznam vizitek je prázdný.</em>
+    </div>
+    [/#list]
 </div>
 </body>
 </html>
