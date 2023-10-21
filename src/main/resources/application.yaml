@@ -1,4 +1,7 @@
+server:
+  port: 8081
 spring:
   freemarker:
     settings:
       output_encoding: UTF-8
+

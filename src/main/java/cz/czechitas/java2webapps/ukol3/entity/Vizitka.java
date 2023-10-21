@@ -5,7 +5,6 @@ public class Vizitka {
     private String firma;
     private String ulice;
     private String obecPsc;
-    private String celaAdresa;
     private String email;
     private String telefon;
     private String web;
@@ -55,11 +54,7 @@ public class Vizitka {
     }
 
     public String getCelaAdresa() {
-        return celaAdresa;
-    }
-
-    public void setCelaAdresa(String celaAdresa) {
-        this.celaAdresa = ulice +" " + obecPsc;
+        return ulice +" " + obecPsc;
     }
 
     public String getEmail() {

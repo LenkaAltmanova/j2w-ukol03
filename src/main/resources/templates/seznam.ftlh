@@ -12,10 +12,9 @@
 </head>
 <body>
 <div class="seznam">
-    [#list vizitky]
-    <a href="/">
+    [#list vizitky as vizitka]
+    <a href="/detail/${vizitka?index}">
         <div class="vizitka">
-            [#items as vizitka]
             <div> ${vizitka?counter}</div>
             <div class="jmeno">${vizitka.jmeno}</div>
             <div class="firma">${vizitka.firma}</div>
@@ -31,7 +30,6 @@
                 </div>
             </div>
         </div>
-        [/#items]
     </a>
     [#else]
     <div>

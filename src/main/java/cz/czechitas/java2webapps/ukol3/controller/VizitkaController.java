@@ -19,7 +19,7 @@ public class VizitkaController {
           new Vizitka("Anna Šedivá", "ABC s.r.o.", "Pivovarská 1126", "Králíky 561 69", "anna.sediva@email.cz", "777 888 999", "www.anna.cz" ),
           new Vizitka("Jan Rychlý", "CDE s.r.o.", "Valdštejnova 359", "Králíky 561 69", "jan.rychly@email.cz", "777 222 111", "www.jan.cz" ),
           new Vizitka("Martin Mlsný", "FGH s.r.o.", "Dolní 241", "Králíky 561 69", "martin.mlsny@email.cz", "777 333 444", "www.martin.cz" )
-  );
+          );
 
   @GetMapping("/")
 
